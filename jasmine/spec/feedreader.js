@@ -93,7 +93,9 @@ $(function () {
     describe('New Feed Selection', function() {
         let initialFeed,
             newFeed;
-
+          /* This test ensures when a new feed is loaded
+         * by the loadFeed function that the content actually changes.
+         */
         beforeEach(function (done) {
             //loads the first feed
             loadFeed(0, function() {
@@ -103,6 +105,7 @@ $(function () {
             });
         });
         it('changes its loaded content', function() {
+            // the new feed from the initial one
             newFeed = $('feed').html();
             expect(newFeed).not.toBe(initialFeed);
         });
