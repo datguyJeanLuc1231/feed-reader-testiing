@@ -1,4 +1,5 @@
 # Feed Reader Testing Project
+
 Testing the Feed Reader app using the `JavaScript` testing framework [Jasmine](https://jasmine.github.io/). This was part of the Front-End Web Developer NanoDegree Program from Udacity.
 
 ## Run the test locally
@@ -16,3 +17,5 @@ Testing the Feed Reader app using the `JavaScript` testing framework [Jasmine](h
 * [Jasmine](https://jasmine.github.io/)
 
 * [npm](https://www.npmjs.com/)
+
+* [jQuery](https://jquery.com/)
