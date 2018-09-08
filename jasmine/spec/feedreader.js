@@ -57,8 +57,7 @@ $(function() {
          * hidden by default. 
          */
         it('is hidden', function() {
-            const body = document.querySelector('body');
-            expect(body.classList.contains('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
          /* This test ensures the menu changes
@@ -67,14 +66,12 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
         it('toggles on and off', function() {
-            const body = document.querySelector('body');
-            const menu = document.querySelector('.menu-icon-link');
             // Checks when the menu is toggled on
-            menu.click();
-            expect(body.classList.contains('menu-hidden')).toBe(false);
+            $(".menu-icon-link").trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
             // Checks when the menu is toggled off
-            menu.click();
-            expect(body.classList.contains('menu-hidden')).toBe(true);
+            $(".menu-icon-link").trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
     });
@@ -89,9 +86,7 @@ $(function() {
         });
 
         it('completes work', function() {
-            const feed = document.querySelector('.feed');
-            expect(feed.children.length > 0).toBe(true);
-        });
+            expect($('.feed .entry').length).toBeGreaterThan(0);        });
     });
     /* Describing test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
